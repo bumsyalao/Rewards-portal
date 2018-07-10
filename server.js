@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const config = require('./webpack.config');
 
@@ -30,7 +31,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port, () => {
-	console.log(`Rewards portal running on port ${port} in ${ENVIRONMENT} mode`);
+	console.log(`Reward Portal running on port ${port} in ${ENVIRONMENT} mode`);
 });
-
-module.exports = app;
