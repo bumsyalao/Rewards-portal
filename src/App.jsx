@@ -6,14 +6,20 @@ class App extends React.Component{
             <div className="wrapper">
                 <div className="form">
                     <h1 className="login-header">Sign In </h1>
-                    <img src="./images/logo.png" width="15%" height="15%"/>
+                    <img className="uba-logo" src="./images/logo.png"/>
                     <form className="login-form">
+                    <div>
                         <label className="email-label" for="email">Email</label><br/>
                         <input id="email" type="text" name="email"/><br/>
-                        <label className="password-label" for="password">Password</label><br/>
+                    </div>
+                    <div>
+                        <label for="password">Password</label><br/>
                         <input id="password" type="password" name="password"/><br/>
-                        <p className="forgot">Forgot password?</p>
-                        <button>Login</button>
+                    </div>
+                        <p className="forgot">Forgot your password?</p>
+                        <button className="login-btn">Login</button>
+                        <p className="register">Dont have an account? </p>
+                        <button className="access-btn">Request for Access </button>
                     </form>
                 </div>
             </div>
