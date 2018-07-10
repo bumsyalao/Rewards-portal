@@ -47,6 +47,7 @@ $lighter-gray: lighten($black, 80%);
         &:hover{
             cursor: pointer;
         }
+        
         .register {
             margin-top: -11px;
             color: #2F2D2E;
@@ -67,12 +68,13 @@ $lighter-gray: lighten($black, 80%);
         border: 0;
         padding: 16px 16px;
         text-align: left;
-        color: $white;
+        color: $white !important;
         transition: (.3s ease);
         font-family: CircularStd;
         font-size: 14px;
         font-weight: 700;
         line-height: 17px;
+        text-decoration: none;
         }
         .access-btn {
             border: 1px solid #C82B1D;
@@ -128,7 +130,7 @@ input {
         float: right;
         width: 73.6px;
         height: 40px;
-        margin-top: -41px;
+        margin-top: -65px;
       }
       
 }
