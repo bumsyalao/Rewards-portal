@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ubalogo from '../images/logo.png';
 
-class auth extends React.Component{
+class Auth extends React.Component{
     render() {
         return (
             <div className="wrapper">
@@ -19,7 +19,7 @@ class auth extends React.Component{
                         <input id="password" type="password" name="password"/><br/>
                     </div>
                         <p className="forgot">Forgot your password?</p>
-                        <Link to="/dashboard">
+                        <Link to="/dashboard/my-dashboard">
                         <button className="login-btn">
                         
                             Login
@@ -35,4 +35,4 @@ class auth extends React.Component{
     }
 }
 
-export default auth;
+export default Auth;

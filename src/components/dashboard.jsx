@@ -1,74 +1,28 @@
 import React from 'react';
-import ubalogored from '../images/logo-red.png';
-import rewardsPortal from '../images/rewards-logo.png';
+import { Route, Switch } from 'react-router-dom';
+import Navbar from './Navbar';
+import Homepage from './Homepage';
+import Report from './Report';
 
-class dashboard extends React.Component {
-    componentDidMount(){
-        var coll = document.getElementsByClassName("collapsible");
-        var i;
+class Dashboard extends React.Component{
 
-        for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.maxHeight){
-            content.style.maxHeight = null;
-            } else {
-            content.style.maxHeight = content.scrollHeight + "px";
-            } 
-        });
-        }
-    }
-    render() {
-        return (
-            <div className="nav-style nav">
-                <div className="nav-bar">
-                    <img className="rewards-logo" src={rewardsPortal} />
-                </div>
-                <div className="side-nav fixed">
-                    <ul>
-                        <li>Dashboard</li>
-                        <li>
-                            <div className="collapsible">Content Management</div>
-                            <div className="content">
-                                <ul>
-                                    <li>Portal Report</li>
-                                    <li>Redemption Report</li>
-                                    <li>BI</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="collapsible">User Management</div>
-                            <div className="content">
-                                <ul>
-                                    <li>Portal Report</li>
-                                    <li>Redemption Report</li>
-                                    <li>BI</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="collapsible">Reporting</div>
-                            <div className="content">
-                                <ul>
-                                    <li>Portal Report</li>
-                                    <li>Redemption Report</li>
-                                    <li>BI</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>System Settings</li>
-                    </ul>
-                    <div className="copyright">
-                            <img src={ubalogored} />
-                            <p>Copyright © 2018 UBA Group PLC. <br />Powered by Interswitch</p>
-                        </div>
-                </div>
-
+    render(){
+        return(
+            <div className="dashboard">
+                <Navbar />
+                <Switch>
+                    <Route 
+                        path={`${this.props.match.url}/my-dashboard`}
+                        component={Homepage}/>
+                    <Route 
+                        path={`${this.props.match.url}/report`}
+                        component={Report}/>
+                </Switch>
             </div>
         );
     }
+
+
 }
 
-export default dashboard;
+export default Dashboard;

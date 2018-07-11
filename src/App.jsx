@@ -1,13 +1,14 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import auth from './components/auth';
-import dashboard from './components/dashboard';
+import Auth from './components/Auth';
+import Navbar from './components/Navbar';
+import Dashboard from './components/Dashboard';
 
 const App = () => (
     <Switch>
-        <Route exact path="/" component={auth} />
-        <Route path="/dashboard" component={dashboard} />
+        <Route exact path="/" component={Auth} />
+        <Route path="/dashboard" component={Dashboard} />
     </Switch>
 );
 
