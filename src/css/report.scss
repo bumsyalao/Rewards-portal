@@ -1,13 +1,45 @@
 .report-page {
-    margin-left: 300px;
-    margin-top: 100px;
-    
+    margin-top: 50px;
+    margin-right: 100px;
+    margin-left: 400px;
+}
+th {
+    color: #777777;
+    font-family: CircularStd;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    text-align: left;
 }
 
 td {
     background-color: #FFFFFF;
     border: 1px solid rgba(192, 192, 192, 0.35);
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 #8BC34A;
     width: 941px;
     height: 50px;
+    color: #777777;
+    font-family: CircularStd;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    text-align: left;
+}
+
+.table-footer {
+    margin-top:34px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #777777;
+    font-family: CircularStd;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 14px;
+    text-align: left;
+
+    a {
+        color: #000 !important;
+        text-decoration: underline !important;
+        cursor: pointer !important;
+    }
 }

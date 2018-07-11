@@ -25,6 +25,7 @@ class Navbar extends React.Component {
             <div className="nav-style nav">
                 <div className="nav-bar">
                     <img className="rewards-logo" src={rewardsPortal} />
+                    <div className="profile-pic"></div>
                 </div>
                 <div className="side-nav fixed">
                     <ul>

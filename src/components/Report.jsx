@@ -5,6 +5,7 @@ class Report extends React.Component {
         return (
             <div className="report-page">
             <table>
+                <thead>
                 <tr>
                     <th>ID</th>
                     <th>First Name</th>
@@ -13,7 +14,9 @@ class Report extends React.Component {
                     <th>Phone</th>
                     <th>Last Login Date</th>
                 </tr>
-                <tr>
+                </thead>
+                <tbody>
+                <tr className="table-body">
                     <td>10</td>
                     <td>Remilekun</td>
                     <td>Chibundu</td>
@@ -21,7 +24,61 @@ class Report extends React.Component {
                     <td>08180000321</td>
                     <td>26 Oct 2017</td>
                 </tr>
+                <tr className="table-body">
+                    <td>10</td>
+                    <td>Remilekun</td>
+                    <td>Chibundu</td>
+                    <td>iswtester@yahoo.com</td>
+                    <td>08180000321</td>
+                    <td>26 Oct 2017</td>
+                </tr>
+                <tr className="table-body">
+                    <td>10</td>
+                    <td>Remilekun</td>
+                    <td>Chibundu</td>
+                    <td>iswtester@yahoo.com</td>
+                    <td>08180000321</td>
+                    <td>26 Oct 2017</td>
+                </tr>
+                <tr className="table-body">
+                    <td>10</td>
+                    <td>Remilekun</td>
+                    <td>Chibundu</td>
+                    <td>iswtester@yahoo.com</td>
+                    <td>08180000321</td>
+                    <td>26 Oct 2017</td>
+                </tr>
+                <tr className="table-body">
+                    <td>10</td>
+                    <td>Remilekun</td>
+                    <td>Chibundu</td>
+                    <td>iswtester@yahoo.com</td>
+                    <td>08180000321</td>
+                    <td>26 Oct 2017</td>
+                </tr>
+                <tr className="table-body">
+                    <td>10</td>
+                    <td>Remilekun</td>
+                    <td>Chibundu</td>
+                    <td>iswtester@yahoo.com</td>
+                    <td>08180000321</td>
+                    <td>26 Oct 2017</td>
+                </tr>
+                <tr className="table-body">
+                    <td>10</td>
+                    <td>Remilekun</td>
+                    <td>Chibundu</td>
+                    <td>iswtester@yahoo.com</td>
+                    <td>08180000321</td>
+                    <td>26 Oct 2017</td>
+                </tr>
+                </tbody>
             </table>
+            <div className="table-footer">
+                        <div>Displaying Users 1 - 39 of 39 in total</div>
+                        <div>Page 2 of 3</div>
+                        <div><a>Download: CSV XML JSON</a></div>
+                </div>
             </div>
         );
     }
