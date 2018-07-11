@@ -26,12 +26,12 @@ class Homepage extends React.Component {
                     </div>
                     <div className="search-box">Search</div>
                 </div>
-                <div class="grid-items">
-                    <div class="card1"></div>
-                    <div class="card2"></div>
-                    <div class="card3"></div>
-                    <div class="card4"></div>
-                    <div class="chart"></div>
+                <div className="grid-items">
+                    <div className="card1"></div>
+                    <div className="card2"></div>
+                    <div className="card3"></div>
+                    <div className="card4"></div>
+                    <div className="chart"></div>
                 </div>
             </div>
         );

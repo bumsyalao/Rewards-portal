@@ -28,7 +28,11 @@ class Navbar extends React.Component {
                 </div>
                 <div className="side-nav fixed">
                     <ul>
-                        <li>Dashboard</li>
+                        <li>
+                            <Link to="/dashboard/my-dashboard" href="#!">
+                                Dashboard
+                            </Link>
+                            </li>
                         <li>
                             <div className="collapsible">Content Management</div>
                             <div className="content">
