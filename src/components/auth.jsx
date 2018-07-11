@@ -19,7 +19,7 @@ class Auth extends React.Component{
                         <input id="password" type="password" name="password"/><br/>
                     </div>
                         <p className="forgot">Forgot your password?</p>
-                        <Link to="/dashboard/my-dashboard">
+                        <Link to="/dashboard/my-dashboard" href="#!">
                         <button className="login-btn">
                         
                             Login

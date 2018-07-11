@@ -114,6 +114,20 @@
         width: 116px;
         height: 24px;
         margin-left: 39px;
+        color: #C0C0C0;
+        font-family: CircularStd;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 20px;
+        text-align: center;
+        b {
+            color: #4A4A4A;
+            font-family: CircularStd;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 14px;
+            text-align: left;
+        }
     }
     .search-box{
         border: 0.5px solid #C0C0C0;
@@ -132,6 +146,7 @@
 
 .grid-items {
     margin: 100px;
+    height: 230px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, minmax(215px, 1fr));
@@ -146,13 +161,25 @@
         justify-content: center;
         background-color: #FFFFFF;
         border: 0.5px solid #D6D6D6;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);*/
  
         
       }
   }
   
-  
+  @media screen and (max-width: 40em) {
+    .grid-items {
+        height: 600px;
+        width: 500px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      grid-template-areas: 
+        "chart chart"
+        "card1 card2"
+        "card3 card4"
+    }
+  }
+
   .chart { 
     grid-area: chart; }
   
@@ -165,3 +192,61 @@
       text-decoration: none !important;
       color: #fff;
   }
+
+  .dropdown {
+      cursor: pointer;
+      &:hover .dropdown-content{
+        display: block;
+      }
+  }
+  .dropdown-content{
+    display: none;
+    position: absolute;
+    padding: 19px;
+    z-index: 1;
+    background-color: #FFFFFF;
+    border-radius: 2px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15);
+    width: 196px;
+    height: 312px;
+
+    a{  
+        display: block;
+        color: #777777;
+        padding: 12px 16px;
+        font-family: CircularStd;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 14px;
+        text-align: left;
+        text-decoration: none;
+
+        &:hover{
+            background-color: #2F2D2E;
+            border-radius: 3px;
+            /* width: 155px;
+             height: 28px; */
+            color: #fff;
+        }
+    }
+    button {
+        border: 1px solid #2F2D2E;
+        border-radius: 13.5px;
+        width: 70px;
+        height: 27px;
+
+        &:hover{
+            border: none;
+            background-color: #D42E12;
+            border-radius: 13.5px;
+            color: #fff;
+        }
+    }
+  }
+.dropdown-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 8px;
+    
+}
