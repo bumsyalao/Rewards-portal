@@ -9,8 +9,14 @@
 	<link type="text/css" rel="stylesheet" href="./dist/style.css" media="all">
 	<!-- <base href="/"/> -->
 	<script>
-		document.write("<base href='" + window.location.protocol + '//' + window.location.host + "' >");
-	</script>
+		(function () {
+			var host = window.location.host;
+		if (host !== "localhost:6090") {
+			host += "/Rewards-portal";
+		}
+		document.write("<base href='"+ window.location.protocol +'//' + host + "' >");
+		})();
+		</script>
 	<title>Rewards Portal</title>
 </head>
 
