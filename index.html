@@ -7,22 +7,35 @@
 	<meta name="description" content="Olubunmi Alao | Rewards Portal | react" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link type="text/css" rel="stylesheet" href="./dist/style.css" media="all">
-	<!-- <base href="/"/> -->
 	<script>
 		(function () {
 			var host = window.location.host;
-		if (host !== "localhost:6090") {
-			host += "/Rewards-portal";
-		}
-		document.write("<base href='"+ window.location.protocol +'//' + host + "' >");
+			if (host !== "localhost:6090") {
+				host += "/Rewards-portal";
+			}
+			document.write("<base href='" + window.location.protocol + '//' + host + "' >");
 		})();
-		</script>
+	</script>
 	<title>Rewards Portal</title>
 </head>
 
 <body>
 	<div id="app"></div>
 </body>
-<script src="./dist/bundle.js" defer></script>
+<script defer>
+	(function () {
+		var protocol = window.location.protocol;
+		var host = window.location.host;
+
+		if (host !== "localhost:6090") {
+			host += "/Rewards-portal";
+		}
+
+		var script = document.createElement('script');
+		script.src = protocol + '//' + host + '/dist/bundle.js';
+
+		document.getElementsByTagName('body')[0].appendChild(script);
+	})();
+</script>
 
 </html>
