@@ -4,7 +4,7 @@ class Report extends React.Component {
     render() {
         return (
             <div className="report-page">
-            <table>
+            <table className="table">
                 <thead>
                 <tr>
                     <th>ID</th>

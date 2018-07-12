@@ -23,7 +23,7 @@ class Auth extends React.Component{
                         <button className="login-btn">
                         
                             Login
-                        
+                            <i className="mdi mdi-chevron-right" />
                         </button>
                         </Link>{' '}
                         <p className="register">Dont have an account? </p>

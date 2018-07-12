@@ -40,3 +40,7 @@
 .icon-dashboard:before {
   content: "\e904";
 }
+
+.icon-chevron-right:before{
+  content: "\f054";
+}
