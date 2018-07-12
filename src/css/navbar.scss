@@ -173,7 +173,7 @@
     grid-gap: 15px;
     
 
-    div {
+    .box {
         padding: 21px;
         background-color: #FFFFFF;
         border: 0.5px solid #D6D6D6;
@@ -220,6 +220,52 @@
   .card2 { grid-area: card2; border-bottom: 2px solid #00C3A2!important;}
   .card3 { grid-area: card3; border-bottom: 2px solid #00C9E0!important;}
   .card4 { grid-area: card4; border-bottom: 2px solid #7269D0!important;}
+
+  .summary-header{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-bottom: 0.5px solid #979797;
+      padding: 15px;
+      .summary{
+        color: #4A4A4A;
+        font-family: CircularStd;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 17px;
+        text-align: left;
+      }
+
+      .month{
+        color: #4A4A4A;
+        font-family: CircularStd;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 14px;
+        text-align: left;
+      }
+      .time {
+        cursor: pointer;
+        border: none;
+        background-color: #D42E12;
+        border-radius: 13.5px;
+        color: #fff;
+        font-family: CircularStd;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 12px;
+        text-align: left;
+      }
+  }
+
+  .summary-body{
+      display: none;
+      grid-gap: 5px;
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+
+
 
   a{
       text-decoration: none !important;
