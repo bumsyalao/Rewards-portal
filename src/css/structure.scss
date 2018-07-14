@@ -21,6 +21,9 @@ $lighter-gray: lighten($black, 80%);
     background-size: cover;
     background-position: center center;
 }
+.dashboard{
+    height: 800px;
+}
 
 .form {
     position: absolute;
@@ -133,3 +136,7 @@ input {
         margin-top: -65px;
       }
     }  
+.right-icon{
+    font-size: 24px;
+    float: right;
+}

@@ -15,7 +15,10 @@ class Dashboard extends React.Component{
                     <div className="flex-date">
                         <div className="my-header">Dashboard</div>
                         <div className="date-toggle dropdown">
-                            Today:<b> 20 Apr</b>
+                            <div className="selected-date">
+                                Today:<b> 20 Apr</b>
+                            </div>
+                            <i className="mdi mdi-arrow-down-drop-circle dropdwn-arrow"/>
                             <div className="dropdown-content">
                                 <a href="#">Today</a>
                                 <a href="#">Yesterday</a>
@@ -31,7 +34,10 @@ class Dashboard extends React.Component{
                             </div>
                         </div>
                     </div>
+                    <div className="search-panel">
                     <input className="search-box" type="text" placeholder="Search"></input>
+                    <i className="mdi mdi-magnify"/>
+                    </div>
                 </div>
                 </div>
                 <Switch>

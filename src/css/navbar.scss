@@ -9,6 +9,22 @@
         height: 60px;
         display: flex;
         justify-content: space-between;
+
+        .nav-right{
+            display: flex;
+            i{
+                width: 24px;
+                height: 20px;
+                margin: 20px;
+                background-color: #C0C0C0;
+                border-radius: 100%;
+                font-size: 14px;
+                text-align: center;
+                padding: 0px;
+                color: #fff !important;
+                cursor: pointer;
+            }
+        }
     }
     .rewards-logo{
         height: 22px;
@@ -38,6 +54,12 @@
         color:#C0C0C0;
         overflow-x: hidden;
         padding-top: 80px;
+        i{
+            margin-left: -30px !important;
+            margin-right: 9px !important;
+            width: 17px !important;
+            height: 15px !important;
+        }
     }
     li {
 
@@ -76,6 +98,12 @@
 
 .collapsible{
 
+
+}
+.left-icon{
+    float: right !important ;
+    width: 12px !important;
+    height: 12px !important;
 }
 .active {
     color: #fff;
@@ -140,6 +168,15 @@
             font-weight: 500;
             line-height: 14px;
             text-align: left;
+        }
+    }
+    .search-panel{
+        i{
+            color: #C0C0C0 !important;
+            margin: 8px !important;
+            font-size: 18px !important;
+            margin-left: -27px !important;
+            position: absolute !important;
         }
     }
     .search-box{
@@ -271,11 +308,22 @@
       text-decoration: none !important;
       color: #fff;
   }
-
+/* date dropdown */
   .dropdown {
       cursor: pointer;
+      display: flex;
       &:hover .dropdown-content{
         display: block;
+      }
+      i {
+        float: right;
+        margin-left: 92px;
+        color: #000;
+        font-size: 24px;
+      }
+      .selected-date{
+        position: absolute;
+        margin-left: 10px;
       }
   }
   .dropdown-content{
@@ -303,8 +351,6 @@
         &:hover{
             background-color: #2F2D2E;
             border-radius: 3px;
-            /* width: 155px;
-             height: 28px; */
             color: #fff;
         }
     }

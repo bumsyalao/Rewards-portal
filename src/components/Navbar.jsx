@@ -25,17 +25,21 @@ class Navbar extends React.Component {
             <div className="nav-style nav">
                 <div className="nav-bar">
                     <img className="rewards-logo" src={rewardsPortal} />
-                    <div className="profile-pic"></div>
+                    <div className="nav-right">
+                    <i className="mdi mdi-bell"/>
+                    <div className="profile-pic"> </div>
+                    </div>
                 </div>
                 <div className="side-nav fixed">
                     <ul>
                         <li>
+                        <i className="icon-dashboard"/>
                             <Link to="/dashboard/my-dashboard" href="#!">
                                 Dashboard
                             </Link>
                             </li>
                         <li>
-                            <div className="collapsible">Content Management</div>
+                            <div className="collapsible"><i className="icon-cms"/>Content Management<i className="mdi mdi-chevron-right left-icon" /></div>
                             <div className="content">
                                 <ul>
                                     <li>Portal Report</li>
@@ -45,7 +49,7 @@ class Navbar extends React.Component {
                             </div>
                         </li>
                         <li>
-                            <div className="collapsible">User Management</div>
+                            <div className="collapsible"><i className="icon-user"/>User Management<i className="mdi mdi-chevron-right left-icon" /></div>
                             <div className="content">
                                 <ul>
                                     <li>Portal Report</li>
@@ -55,7 +59,7 @@ class Navbar extends React.Component {
                             </div>
                         </li>
                         <li>
-                            <div className="collapsible">Reporting</div>
+                            <div className="collapsible"><i className="icon-reporting"/> Reporting<i className="mdi mdi-chevron-right left-icon" /></div>
                             <div className="content">
                                 <ul>
                                     <li>
@@ -68,7 +72,7 @@ class Navbar extends React.Component {
                                 </ul>
                             </div>
                         </li>
-                        <li>System Settings</li>
+                        <li><i className="icon-settings"/>System Settings</li>
                     </ul>
                     <div className="copyright">
                             <img src={ubalogored} />
