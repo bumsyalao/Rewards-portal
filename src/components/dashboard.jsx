@@ -5,6 +5,21 @@ import Homepage from './Homepage';
 import Report from './Report';
 
 class Dashboard extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            selected: 'Today'
+        }
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+    handleChange(e){
+        let newValue = e.target.id.replace(/_/g, " ");
+        this.setState({ selected: newValue})
+    }
+    handleSubmit(e){
+        e.preventDefault();
+    }
 
     render(){
         return(
@@ -16,19 +31,19 @@ class Dashboard extends React.Component{
                         <div className="my-header">Dashboard</div>
                         <div className="date-toggle dropdown">
                             <div className="selected-date">
-                                Today:<b> 20 Apr</b>
+                                <b>{this.state.selected}</b>
                             </div>
                             <i className="mdi mdi-arrow-down-drop-circle dropdwn-arrow"/>
                             <div className="dropdown-content">
-                                <a href="#">Today</a>
-                                <a href="#">Yesterday</a>
-                                <a href="#">Last 7 Days</a>
-                                <a href="#">Last 30 Days</a>
-                                <a href="#">This Month</a>
-                                <a href="#">Last Month</a>
-                                <a href="#">Custom Range</a>
+                                <span id="Today" value="Today" onClick={this.handleChange}>Today</span>
+                                <span id="Yesterday" value="Yesterday" onClick={this.handleChange}>Yesterday</span>
+                                <span id="Last_7_Days" value="Last 7 Days" onClick={this.handleChange}>Last 7 Days</span>
+                                <span id="Last_30_Days" value="Last 30 Days" onClick={this.handleChange}>Last 30 Days</span>
+                                <span id="This_Month" value="This Month" onClick={this.handleChange}>This Month</span>
+                                <span id="Last_Month" value="Last Month" onClick={this.handleChange}>Last Month</span>
+                                <span id="Custom_Range" value="Custom Range" onClick={this.handleChange}>Custom Range</span>
                                 <div className="dropdown-btns">
-                                    <button>Apply</button>
+                                    <button onClick={this.handleSubmit}>Apply</button>
                                     <button>Cancel</button>
                                 </div>
                             </div>

@@ -1,10 +1,13 @@
 import React from 'react';
 
 class Report extends React.Component {
+    constructor(){
+        super();
+    }
     render() {
         return (
             <div className="report-page">
-            <table className="table">
+            <table cellSpacing="2px" className="table">
                 <thead>
                 <tr>
                     <th>ID</th>
