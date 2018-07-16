@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "NODE_ENV=development nodemon server.js",
-    "start": "npm run build && node server.js",
+    "start": "node server.js",
     "build": "rm -rf dist && NODE_ENV=production && webpack --config webpack.config.js --progress --colors"
   },
   "repository": {
@@ -42,9 +42,7 @@
     "json-loader": "0.5.7",
     "loader": "2.1.1",
     "css-loader": "0.28.8",
-    "file-loader": "1.1.6"
-  },
-  "devDependencies": {
+    "file-loader": "1.1.6",
     "autoprefixer": "7.2.4",
     "babel-cli": "6.26.0",
     "babel-core": "6.26.0",
