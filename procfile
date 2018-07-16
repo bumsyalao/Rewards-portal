@@ -1,1 +1,1 @@
-web: nodemon server.js NODE_ENV=production
+web: babel-node server.js NODE_ENV=production
