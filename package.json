@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "NODE_ENV=development nodemon server.js",
     "prod": "NODE_ENV=production nodemon server.js",
-    "start": "node server.js",
+    "start": "npm run build && node server.js",
     "build": "rm -rf dist && NODE_ENV=production && webpack --config webpack.config.js --progress --colors",
     "postinstall": "webpack --config webpack.config.js -p --progress --colors"
   },
