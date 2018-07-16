@@ -8,7 +8,7 @@ const webpackHotMiddleware = require('webpack-hot-middleware');
 
 const app = express();
 const ENVIRONMENT = process.env.NODE_ENV;
-const port = 6090;
+const PORT = parseInt(process.env.PORT, 10) || 3000;
 
 // app.use(express.static('dist'));
 app.use(express.static(__dirname + '/dist'));
@@ -34,6 +34,8 @@ app.get('/*', (req, res) => {
 	res.sendFile(`${__dirname}/index.html`);
 });
 
-app.listen(port, () => {
-	console.log(`Reward Portal running on port ${port} in ${ENVIRONMENT} mode`);
+app.set('port', PORT);
+
+app.listen(PORT, () => {
+	console.log(`Reward Portal running on port ${PORT} in ${ENVIRONMENT} mode`);
 });
