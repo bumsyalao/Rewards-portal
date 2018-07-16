@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "NODE_ENV=development nodemon server.js",
     "prod": "NODE_ENV=production nodemon server.js",
-    "build": "rm -rf dist && NODE_ENV=production webpack --config webpack.config.js --progress --colors",
     "start": "node server.js",
+    "build": "rm -rf dist && NODE_ENV=production && webpack --config webpack.config.js --progress --colors",
     "postinstall": "webpack --config webpack.config.js -p --progress --colors"
   },
   "repository": {
@@ -31,6 +31,8 @@
   "homepage": "https://github.com/bumsyalao/Rewards-portal#readme",
   "dependencies": {
     "axios": "^0.18.0",
+    "concurrently": "^3.6.0",
+    "copy-webpack-plugin": "^4.5.2",
     "express": "4.16.2",
     "react": "16.2.0",
     "react-dom": "16.2.0",
@@ -50,14 +52,17 @@
     "extract-text-webpack-plugin": "2.1.2",
     "file-loader": "1.1.6",
     "html-pdf": "2.2.0",
+    "json-loader": "^0.5.7",
+    "loader": "^2.1.1",
     "node-sass": "4.7.2",
     "nodemon": "1.14.10",
     "postcss-loader": "2.0.10",
     "sass-loader": "6.0.6",
     "style-loader": "0.19.1",
+    "url": "^0.11.0",
     "webpack": "3.10.0",
+    "webpack-cli": "3.0.8",
     "webpack-dev-middleware": "2.0.4",
-    "webpack-hot-middleware": "2.21.0",
-    "webpack-cli": "3.0.8"
+    "webpack-hot-middleware": "2.21.0"
   }
 }

@@ -11,10 +11,12 @@ const ENVIRONMENT = process.env.NODE_ENV;
 const port = 6090;
 
 // app.use(express.static('dist'));
-app.use(express.static(__dirname + '/dist'))
+app.use(express.static(__dirname + '/dist'));
+// app.use(express.static(path.join(__dirname, './src/')));
 
 if (ENVIRONMENT === 'development') {
 	// Attach webpack dev server to running app
+	
 	(serverInstance => {
 		const options = {
 			historyApiFallback: true,
@@ -25,7 +27,8 @@ if (ENVIRONMENT === 'development') {
 		serverInstance.use(webpackDevMiddleWare(compiler, options));
 		serverInstance.use(webpackHotMiddleware(compiler));
 	})(app);
-}
+} 
+
 
 app.get('/*', (req, res) => {
 	res.sendFile(`${__dirname}/index.html`);
