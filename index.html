@@ -8,7 +8,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" type="text/css" href="https://cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css">
 	<link type="text/css" rel="stylesheet" href="./dist/style.css" media="all">
-	<script>
+	<base href="/"/>
+	<!-- <script>
 		(function () {
 			var host = window.location.host;
 			if (host !== "localhost:6090") {
@@ -16,14 +17,15 @@
 			}
 			document.write("<base href='" + window.location.protocol + '//' + host + "' >");
 		})();
-	</script>
+	</script> -->
 	<title>Rewards Portal</title>
 </head>
 
 <body>
 	<div id="app"></div>
 </body>
-<script defer>
+<script src="./dist/bundle.js" defer></script>
+<!-- <script defer>
 	(function () {
 		var protocol = window.location.protocol;
 		var host = window.location.host;
@@ -37,6 +39,6 @@
 
 		document.getElementsByTagName('body')[0].appendChild(script);
 	})();
-</script>
+</script> -->
 
 </html>
