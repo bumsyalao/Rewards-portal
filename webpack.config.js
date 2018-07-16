@@ -39,7 +39,7 @@ const config = {
 		path: `${__dirname}/dist/`,
 		filename: '[name].js',
 		chunkFilename: '[id].js',
-		publicPath: '/dist/'
+		publicPath: '/'
 	},
 
 	plugins: [
