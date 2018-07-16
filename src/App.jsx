@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Auth from './components/Auth.jsx';
-import Dashboard from './components/Dashboard.jsx';
+import Auth from './components/Auth';
+import Dashboard from './components/Dashboard';
 
 const App = () => (
     

@@ -8,7 +8,7 @@
     "prod": "NODE_ENV=production nodemon server.js",
     "build": "rm -rf dist && NODE_ENV=production webpack --config webpack.config.js --progress --colors",
     "start": "node server.js",
-    "postinstall": "rm -rf dist && webpack --config webpack.config.js -p --progress --colors"
+    "postinstall": "webpack --config webpack.config.js -p --progress --colors"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,9 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bumsyalao/Rewards-portal/issues"
+  },
+  "engines": {
+    "node": "10.1.0"
   },
   "homepage": "https://github.com/bumsyalao/Rewards-portal#readme",
   "dependencies": {
